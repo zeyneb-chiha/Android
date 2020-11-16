@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!--done (1) Change the ConstraintLayout to a LinearLayout-->
+<!--done (2) Make the orientation vertical-->
+<!--done (3) Give left, right, and top padding of 16dp-->
+<!--done (4) Remove the line that declares the id, we don't need it-->
+<!--done (5) Remove the xmlns:app declaration, we don't need that anymore-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:scrollbarSize="22sp">
+
+    <!--done (6) Delete this TextView-->
+
+
+    <!--done (7) Add an EditText-->
+    <!--done (8) Give the EditText an id of @+id/et_search_box-->
+    <!--done (9) Set the text size to 22sp-->
+    <!--done (10) Set the width to match_parent and the height to wrap_content-->
+    <!--done (11) Provide a hint telling the user to enter a query and then click search-->
+
+    <!--done (12) Add a TextView-->
+    <!--done (13) Give the TextView an id of @+id/tv_url_display-->
+    <!--done (14) Set the text size to 22sp-->
+    <!--done (15) Set the width to wrap_content and the height to wrap_content-->
+    <!--done (16) Give the TextView a top margin of 8dp-->
+    <!--done (17) Set the text to tell the user their search URL will show up here when they click search-->
+
+    <!--done (18) Add a ScrollView-->
+    <!--done (19) Set the width to match_parent and the height to wrap_content-->
+    <!--done (20) Set the top margin to 16dp-->
+
+    <!--done (21) Within the ScrollView, add a TextView-->
+    <!--done (22) Give the TextView an id of @+id/tv_github_search_results_json-->
+    <!--done (23) Set the text size to 18sp-->
+    <!--done (24) Set the height and width to wrap_content-->
+    <!--done (25) Set the text to something that tells the user to make a search-->
+
+    <EditText
+        android:id="@+id/et_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/Query_Search"
+        android:inputType="textPersonName"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_url_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/Show_URL_Searching"
+        android:textSize="22sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_github_search_results_json"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Making_Search"
+        android:textSize="18sp" />
+
+</LinearLayout>
